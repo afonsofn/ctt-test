@@ -47,14 +47,14 @@ describe('ProductList', () => {
 
     renderWithStore(mockProducts);
 
-    expect(screen.getByText('Product List')).toBeDefined();
-    expect(screen.getByText('Camiseta')).toBeDefined();
-    expect(screen.getByText('Fone Bluetooth')).toBeDefined();
+    expect(screen.getByText('Product List')).toBeInTheDocument();
+    expect(screen.getByText('Camiseta')).toBeInTheDocument();
+    expect(screen.getByText('Fone Bluetooth')).toBeInTheDocument();
   });
 
   it('shows fallback message when no products', () => {
     renderWithStore([]);
 
-    expect(screen.getByText('No products found.')).toBeDefined();
+    expect(screen.getByText('No products found.')).toBeInTheDocument();
   });
 });
