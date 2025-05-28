@@ -46,4 +46,21 @@ describe('ProductItem', () => {
 
     expect(screen.getByDisplayValue(/Updated Name/i)).toBeInTheDocument();
   });
+
+  it('deletes the product when delete button is clicked', () => {
+    const product: Product = {
+      id: '1',
+      description: 'To be deleted',
+      price: 50,
+      stock: 10,
+      categories: [],
+    };
+  
+    const { queryByDisplayValue } = renderItem(product);
+  
+    fireEvent.click(screen.getByText(/delete/i));
+  
+    expect(queryByDisplayValue(/To be deleted/i)).not.toBeInTheDocument();
+  });
+  
 });
