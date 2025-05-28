@@ -26,4 +26,4 @@ jobs:
         run: npm run build
 
       - name: Run tests
-        run: echo "Tests not implemented yet"
+        run: npm test

@@ -1,5 +1,12 @@
+import { Provider } from 'react-redux';
+import { store } from '../app/store';
+
 const App = () => {
-  return <h1>App</h1>;
+  return (
+    <Provider store={store}>
+      <h1>App</h1>
+    </Provider>
+  );
 };
 
 export default App;
