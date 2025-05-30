@@ -1,0 +1,71 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 8px 16px;
+  max-height: 35px;
+  width: 100%;
+  font-size: 14px;
+  font-weight: 500;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  color: white;
+}
+
+.btn.primary {
+  background-color: #a02121;
+}
+.btn.primary:hover {
+  background-color: #861c1c;
+}
+.btn.primary:active {
+  background-color: #6e1616;
+}
+
+.btn.secondary {
+  background-color: #909090;
+}
+.btn.secondary:hover {
+  background-color: #727272;
+}
+.btn.secondary:active {
+  background-color: #606060;
+}
+
+.btn.small {
+  padding: 6px 10px;
+  font-size: 13px;
+  width: auto;
+}
+
+.btn-icon {
+  display: inline-flex;
+}
+
+.btn-text {
+  display: inline;
+}
+
+.spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid #fff;
+  border-top: 2px solid transparent;
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 780px) {
+  .btn.small .btn-text {
+    display: none;
+  }
+}
