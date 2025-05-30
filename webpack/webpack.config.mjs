@@ -1,7 +1,13 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+import HtmlWebpackPlugin from "html-webpack-plugin";
+import { dirname } from "path";
+import { fileURLToPath } from "url";
+import path from "path";
 
-module.exports = {
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+
+export default {
   mode: 'development',
   entry: './src/index.tsx',
   devtool: 'source-map',
@@ -11,6 +17,7 @@ module.exports = {
     publicPath: '/',
   },
   resolve: {
+    alias: { '@': path.resolve(__dirname, '../app') },
     extensions: ['.tsx', '.ts', '.js'],
     modules: [path.resolve(__dirname, '../src'), 'node_modules'],
   },

@@ -1,0 +1,15 @@
+{
+  "products": [
+    {
+      "description": "Apple Watch Series 9",
+      "price": 1000,
+      "stock": 12,
+      "categories": [
+        "laptop",
+        "wearable",
+        "tech"
+      ],
+      "id": "102fd1ec-476c-4f2d-9ba3-94a032e30f32"
+    }
+  ]
+}
