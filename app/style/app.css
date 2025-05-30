@@ -1,0 +1,26 @@
+.app-main {
+  padding: 28px 32px;
+}
+
+.app-title {
+  margin-bottom: 24px;
+  color: #a02121;
+}
+
+.app-content {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+
+@media (max-width: 780px) {
+  .app-main {
+    padding: 18px 24px;
+  }
+  
+  .app-title {
+    margin-bottom: 16px;
+  }
+}
