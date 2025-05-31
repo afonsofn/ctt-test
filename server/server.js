@@ -29,7 +29,6 @@ const initializeProducts = () => {
       },
     ];
     writeData(data);
-    console.log("Produtos iniciais criados com sucesso.");
   }
 };
 

@@ -1,0 +1,22 @@
+.new-product-wrapper {
+  padding: 24px 28px;
+  background: #fff;
+  border-radius: 8px;
+  width: 100%;
+  container-type: inline-size;
+  container-name: productFormContainer;
+}
+
+.new-product-wrapper h2 {
+  margin-bottom: 20px;
+}
+
+@media (max-width: 780px) {
+  .new-product-wrapper {
+    padding: 15px 18px;
+  }
+
+  .new-product-wrapper h2 {
+    margin-bottom: 12px;
+  }
+}
