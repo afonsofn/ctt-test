@@ -30,17 +30,17 @@ A lightweight and fully dockerized product management application built with mod
 
 You can run the project locally **without Docker**, using two terminal windows:
 
-- In the **first terminal**, start the frontend:
+- In the **first terminal**, start API server:
+
+```bash
+npm run start:api # Launches the Express API at http://localhost:4000
+```
+
+- In the **second terminal**, start the frontend:
 
 ```bash
 npm install
 npm run start # Launches Webpack Dev Server at http://localhost:3000
-```
-
-- In the **second terminal**, start API server:
-
-```bash
-npm run start:api # Launches the Express API at http://localhost:4000
 ```
 
 ### Run with Docker
