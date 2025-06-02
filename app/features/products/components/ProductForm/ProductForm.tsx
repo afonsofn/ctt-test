@@ -1,11 +1,12 @@
 import "./ProductForm.css";
 
+import React, { useMemo } from "react";
+import { formatPrice, formatPriceFromEuros } from "@/features/products/utils";
+
 import Button from "@/components/Button/Button";
 import { CATEGORIES } from "../../constants/categories";
 import MultiSelect from "@/components/MultiSelect/MultiSelect";
 import { ProductFormProps } from "./ProductForm.types";
-import React from "react";
-import { formatPrice } from "@/features/products/utils";
 
 const ProductForm = React.memo((props: ProductFormProps) => {
   const {
@@ -29,6 +30,12 @@ const ProductForm = React.memo((props: ProductFormProps) => {
     const masked = formatPrice(e.target.value);
     onPriceChange(masked);
   };
+
+  const formattedPrice = useMemo(() => {
+    if ((typeof price === "string" && price.includes(",")) || price === "")
+      return price;
+    return formatPriceFromEuros(price);
+  }, [price]);
 
   return (
     <section className="product-form-wrapper">
@@ -55,7 +62,7 @@ const ProductForm = React.memo((props: ProductFormProps) => {
             id="price-input"
             type="decimal"
             placeholder="€ 790,00"
-            value={price}
+            value={formattedPrice}
             onChange={handlePriceChange}
           />
         </div>
