@@ -1,6 +1,7 @@
 .multi-select {
   position: relative;
   width: 100%;
+  min-width: 178px;
 }
 
 .multi-select-display {

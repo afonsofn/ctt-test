@@ -1,15 +1,22 @@
 {
   "products": [
     {
-      "description": "Apple Watch Series 9",
-      "price": 1000,
-      "stock": 12,
+      "id": "7edeb958-aecb-4424-bab4-cb2eb895a748",
+      "description": "iPhone 15 Pro",
+      "price": 1199,
+      "stock": 10,
       "categories": [
-        "laptop",
-        "wearable",
         "tech"
-      ],
-      "id": "102fd1ec-476c-4f2d-9ba3-94a032e30f32"
+      ]
+    },
+    {
+      "id": "14fc0ebf-586f-4616-bbfc-a2a8858232dc",
+      "description": "MacBook Air M2",
+      "price": 999,
+      "stock": 5,
+      "categories": [
+        "laptop"
+      ]
     }
   ]
 }
